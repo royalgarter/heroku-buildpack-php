@@ -51,12 +51,12 @@ can be downloaded by the build pack (see the URIs in `compile`).
     tar jxf $mcrypt_archive_name
 
     # Build and install mcrypt.
-    pushd $mcrypt_dirname
+    cd $mcrypt_dirname
     ./configure --prefix=/app/vendor/mcrypt \
       --disable-posix-threads --enable-dynamic-loading
     make -s
     make install -s
-    popd
+    cd -
 
     # Take care of vendoring Apache.
     httpd_version=2.2.25
@@ -74,11 +74,11 @@ can be downloaded by the build pack (see the URIs in `compile`).
     tar jxf $httpd_archive_name
 
     # Build and install Apache.
-    pushd $httpd_dirname
+    cd $httpd_dirname
     ./configure --prefix=/app/apache --enable-rewrite --with-included-apr
     make -s
     make install -s
-    popd
+    cd -
 
     # Take care of vendoring PHP.
     php_version=5.3.27
@@ -96,7 +96,7 @@ can be downloaded by the build pack (see the URIs in `compile`).
     tar jxf $php_archive_name
 
     # Compile PHP
-    pushd $php_dirname
+    cd $php_dirname
     ./configure --prefix=/app/php --with-apxs2=/app/apache/bin/apxs     \
     --with-mysql --with-pdo-mysql --with-pgsql --with-pdo-pgsql         \
     --with-iconv --with-gd --with-curl=/usr/lib                         \
@@ -104,7 +104,7 @@ can be downloaded by the build pack (see the URIs in `compile`).
     --with-openssl --with-mcrypt=/app/vendor/mcrypt --enable-sockets
     make -s
     make install -s
-    popd
+    cd -
 
     # Copy in MySQL client library.
     mkdir -p /app/php/lib/php
@@ -126,14 +126,14 @@ can be downloaded by the build pack (see the URIs in `compile`).
     find /app/apache/cgi-bin/ -mindepth 1 -print0 | xargs -0 rm -r
 
     # Stamp and archive binaries.
-    pushd /app
+    cd /app
     echo $mcrypt_version > vendor/mcrypt/VERSION
     tar -zcf mcrypt-"$mcrypt_version""$heroku_rev".tar.gz vendor/mcrypt
     echo $httpd_version > apache/VERSION
     tar -zcf apache-"$httpd_version""$heroku_rev".tar.gz apache
     echo $php_version > php/VERSION
     tar -zcf php-"$php_version""$heroku_rev".tar.gz php
-    popd
+    cd -
 
 Hacking
 -------
