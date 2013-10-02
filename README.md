@@ -99,9 +99,10 @@ can be downloaded by the build pack (see the URIs in `compile`).
     cd $php_dirname
     ./configure --prefix=/app/php --with-apxs2=/app/apache/bin/apxs     \
     --with-mysql --with-pdo-mysql --with-pgsql --with-pdo-pgsql         \
-    --with-iconv --with-gd --with-curl=/usr/lib                         \
-    --with-config-file-path=/app/php --enable-soap=shared               \
-    --with-openssl --with-mcrypt=/app/vendor/mcrypt --enable-sockets
+    --with-iconv --with-gd --with-jpeg-dir --with-png-dir               \
+    --with-curl=/usr/lib --with-config-file-path=/app/php               \
+    --enable-soap=shared --with-openssl                                 \
+    --with-mcrypt=/app/vendor/mcrypt --enable-sockets
     make -s
     make install -s
     cd -
