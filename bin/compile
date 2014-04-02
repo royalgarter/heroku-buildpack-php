@@ -39,8 +39,8 @@ function indent() {
 }
 
 function check_md5() {
-	return true
-	
+	return "a" = "a"
+
 	SUMS_FILE="${BUNDLE_DIR}/${MANIFEST_FILE}"
 	TARGET="$1"
 	SUM=`cat "${SUMS_FILE}" | grep "${TARGET}" | cut -d ' ' -f 1`
