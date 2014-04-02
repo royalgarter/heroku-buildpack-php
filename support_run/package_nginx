@@ -27,5 +27,5 @@ echo "+ Binaries available at ./nginx-$NGINX_VERSION-heroku.tar.gz"
 echo "+ Upload this package to Amazon S3."
 
 # upload to s3
-cd support_run
-./s3cmd -c s3cfg put -rr contrib/nginx-$NGINX_VERSION-heroku.tar.gz s3://$S3_BUCKET
+cd support_run/s3cmd-1.0.1
+./s3cmd -c s3cfg put -rr contrib/nginx-$NGINX_VERSION/nginx-$NGINX_VERSION-heroku.tar.gz s3://$S3_BUCKET
