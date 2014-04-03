@@ -9,12 +9,6 @@ assertCapturedOnStdErr()
 	assertFileContains "$@" "${STD_ERR}"
 }
 
-testDebugCompile()
-{
-	capture
-	compile
-}
-
 testCompile()
 {
 	compile

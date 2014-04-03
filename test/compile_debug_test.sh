@@ -4,6 +4,5 @@
 
 testDebugCompile()
 {
-	capture
-	compile
+	capture compile
 }
