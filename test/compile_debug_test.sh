@@ -7,5 +7,10 @@ testDebugCompile()
 	echo "Testing compile"
 	capture ${BUILDPACK_HOME}/bin/compile ${BUILD_DIR} ${CACHE_DIR}
 
+	echo "STD_OUT>>>>>>>>>"
 	cat ${STD_OUT}
+
+	echo "STD_ERR>>>>>>>>>"
+	cat ${STD_ERR}
+
 }
