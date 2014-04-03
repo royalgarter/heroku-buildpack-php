@@ -22,7 +22,7 @@ cd nginx-$NGINX_VERSION
 
 ./configure --prefix=/app/vendor/nginx --with-pcre=../pcre-8.32 --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --add-module=../ngx_pagespeed-$PAGESPEED_VERSION && make install
 
-tar -czf nginx-$NGINX_VERSION-heroku.tar.gz /app/vendor/nginx
+tar -czf nginx-$NGINX_VERSION-heroku.tar.gz -C /app/vendor/nginx .
 
 popd
 echo "+ Binaries available at ./nginx-$NGINX_VERSION-heroku.tar.gz"
