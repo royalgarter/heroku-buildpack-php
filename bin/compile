@@ -93,6 +93,9 @@ else
 	echo "Bundling Nginx v${NGINX_VERSION}" | indent
 	echo ${NGINX_URL} | indent
 	download_url ${NGINX_URL}
+
+	echo "Downloaded"
+	ls -l
 fi
 
 mkdir -p ${BUILD_DIR}/vendor/nginx
