@@ -21,7 +21,7 @@ MEMCACHED_FILE="libmemcached-${LIBMEMCACHED_VERSION}.tar.gz"
 PHP_FILE="php-${PHP_VERSION}-with-fpm-heroku.tar.gz"
 NEWRELIC_FILE="newrelic-${NEWRELIC_VERSION}-heroku.tar.gz"
 
-MANIFEST_URL="https://www.dropbox.com/s/bax1x1djmp7h19q/manifest.m5sum"
+MANIFEST_URL="https://www.dropbox.com/s/gycmnyivrui6gsa/manifest.md5sum"
 NGINX_URL="https://www.dropbox.com/s/tspit48ddtar7wq/nginx-1.4.6-heroku.tar.gz"
 MCRYPT_URL="https://www.dropbox.com/s/7fkb6d4su5x3x21/libmcrypt-2.5.8.tar.gz"
 MEMCACHED_URL="https://www.dropbox.com/s/6wybpe8l6ip4xqs/libmemcached-1.0.7.tar.gz"
