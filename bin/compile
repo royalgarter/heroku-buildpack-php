@@ -99,6 +99,7 @@ else
 fi
 
 mkdir -p ${BUILD_DIR}/vendor/nginx
+echo "Untar ${NGINX_FILE} -> ${BUILD_DIR}/vendor/nginx"
 tar xzf ${NGINX_FILE} -C ${BUILD_DIR}/vendor/nginx
 
 # libmcrypt
