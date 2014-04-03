@@ -6,4 +6,6 @@ testDebugCompile()
 {
 	echo "Testing compile"
 	capture ${BUILDPACK_HOME}/bin/compile ${BUILD_DIR} ${CACHE_DIR}
+
+	cat ${STD_OUT}
 }
