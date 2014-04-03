@@ -2,7 +2,7 @@
 
 . ${BUILDPACK_TEST_RUNNER_HOME}/lib/test_utils.sh
 
-. ${BUILDPACK_HOME}/support/set-env.sh
+. ${BUILDPACK_HOME}/support_run/set-env.sh
 
 assertCapturedOnStdErr()
 {
