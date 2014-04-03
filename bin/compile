@@ -96,7 +96,7 @@ else
 fi
 
 mkdir -p ${BUILD_DIR}/vendor/nginx
-tar xzf ${NGINX_FILE} -C ${BUILD_DIR}/vendor/nginx
+# tar xzf ${NGINX_FILE} -C ${BUILD_DIR}/vendor/nginx
 
 # libmcrypt
 echo "-----> Installing libmcrypt"
