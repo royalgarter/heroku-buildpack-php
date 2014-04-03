@@ -4,5 +4,5 @@
 
 testDebugCompile()
 {
-	capture compile
+	capture ${BUILDPACK_HOME}/bin/compile ${BUILD_DIR} ${CACHE_DIR}
 }
